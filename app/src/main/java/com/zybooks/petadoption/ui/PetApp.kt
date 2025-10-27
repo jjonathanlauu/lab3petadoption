@@ -29,7 +29,6 @@ import com.zybooks.petadoption.data.*
 import com.zybooks.petadoption.ui.theme.PetAdoptionTheme
 import kotlinx.serialization.Serializable
 
-// ---------------- ROUTES ----------------
 sealed class Routes {
    @Serializable
    data object List
@@ -42,8 +41,6 @@ sealed class Routes {
    @Serializable
    data class Adopt(val petId: Int)
 }
-
-// ---------------- APP BAR ----------------
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PetAppBar(
@@ -68,7 +65,6 @@ fun PetAppBar(
    )
 }
 
-// ---------------- MAIN APP ----------------
 @Composable
 fun PetApp() {
    val navController = rememberNavController()
@@ -102,7 +98,6 @@ fun PetApp() {
    }
 }
 
-// ---------------- LIST SCREEN ----------------
 @Composable
 fun ListScreen(
    onImageClick: (Pet) -> Unit,
@@ -128,7 +123,6 @@ fun ListScreen(
    }
 }
 
-// ---------------- DETAIL SCREEN ----------------
 @Composable
 fun DetailScreen(
    petId: Int,
@@ -168,7 +162,6 @@ fun DetailScreen(
    }
 }
 
-// ---------------- ADOPT SCREEN ----------------
 @Composable
 fun AdoptScreen(
    petId: Int,
@@ -211,7 +204,6 @@ fun AdoptScreen(
    }
 }
 
-// ---------------- PREVIEWS ----------------
 @Preview
 @Composable
 fun PreviewListScreen() {
